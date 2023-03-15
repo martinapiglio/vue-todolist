@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-
 </head>
 <body>
 
@@ -20,7 +19,7 @@
             </li>
         </ul>
 
-        <input type="text" v-model="newToDo">
+        <input type="text" v-model="newToDo" @keyup.enter="addToDo()" >
         <button @click="addToDo()">Aggiungi elemento</button>
 
     </div>
