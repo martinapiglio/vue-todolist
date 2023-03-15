@@ -13,8 +13,8 @@
         <h1>To-Do List</h1>
         
         <ul>
-            <li v-for="(toDoElement, index) in toDoElements" :style="toDoElement.done == true ? {textDecoration: 'line-through'} : ''" >
-                <span>{{ toDoElement.text }}</span> - 
+            <li v-for="(toDoElement, index) in toDoElements" >
+                <span @click="toDoElement.done= !toDoElement.done" :style="toDoElement.done == true ? {textDecoration: 'line-through'} : ''">{{ toDoElement.text }}</span> - 
                 <span @click="removeToDo(index)">x</span>
             </li>
         </ul>
